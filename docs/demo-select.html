@@ -9,11 +9,22 @@
         <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
         <meta name="theme-color" content="#202b38" media="(prefers-color-scheme: dark)">
 
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@hhiruko/water.css/dist/water.min.css">
+        <link id="water-stylesheet" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@hhiruko/water.css/dist/water.min.css">
         <link rel="stylesheet" href="index.css">
     </head>
     <body>
         <main role="main">
+            <section id="source-demo">
+                <h2>water.css Stylesheet Source</h2>
+                <form id="source-form">
+                    <input type="radio" value="cdn" checked name="source" id="source-cdn" data-href="https://cdn.jsdelivr.net/npm/@hhiruko/water.css/dist/water.min.css" />
+                    <label for="source-cdn"><code>https://cdn.jsdelivr.net/npm/@hhiruko/water.css/dist/water.min.css</code></label>
+
+                    <input type="radio" value="dist" name="source" id="source-dist" data-href="../dist/water.min.css" />
+                    <label for="source-dist"><code>../dist/water.min.css</code></label>
+                </form>
+            </section>
+
             <section id="how-to-use">
                 <h2>Theme</h2>
                 <form id="theme-form">
@@ -51,6 +62,13 @@
             </div>
         </main>
 
+        <script>
+            const waterStylesheet = document.querySelector('#water-stylesheet');
+
+            document.querySelector('#source-form').addEventListener('change', (e) => {
+                waterStylesheet.setAttribute('href', e.target.dataset.href);
+            });
+        </script>
         <script src="index.js"></script>
     </body>
 </html>
