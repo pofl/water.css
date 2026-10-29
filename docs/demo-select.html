@@ -28,10 +28,7 @@
             <section id="how-to-use">
                 <h2>Theme</h2>
                 <form id="theme-form">
-                    <input type="radio" value="auto" checked name="theme" id="theme-auto" />
-                    <label for="theme-auto">Automatic 🌙 / ☀</label>
-
-                    <input type="radio" value="dark" name="theme" id="theme-dark" />
+                    <input type="radio" value="dark" checked name="theme" id="theme-dark" />
                     <label for="theme-dark">Dark theme 🌙</label>
 
                     <input type="radio" value="light" name="theme" id="theme-light" />
@@ -70,5 +67,8 @@
             });
         </script>
         <script src="index.js"></script>
+        <script>
+            document.querySelector('#theme-dark').dispatchEvent(new Event('change', { bubbles: true }));
+        </script>
     </body>
 </html>
