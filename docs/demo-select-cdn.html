@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+        <title>Water.css select demo</title>
+
+        <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+        <meta name="theme-color" content="#202b38" media="(prefers-color-scheme: dark)">
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@hhiruko/water.css/dist/water.min.css">
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <main role="main">
+            <section id="how-to-use">
+                <h2>Theme</h2>
+                <form id="theme-form">
+                    <input type="radio" value="auto" checked name="theme" id="theme-auto" />
+                    <label for="theme-auto">Automatic 🌙 / ☀</label>
+
+                    <input type="radio" value="dark" name="theme" id="theme-dark" />
+                    <label for="theme-dark">Dark theme 🌙</label>
+
+                    <input type="radio" value="light" name="theme" id="theme-light" />
+                    <label for="theme-light">Light theme ☀</label>
+                </form>
+                <pre><code id="theme-example-code">&lt;body&gt;<br>    ...<br>&lt;/body&gt;</code></pre>
+            </section>
+
+            <section id="select-demo">
+                <h2>Select</h2>
+                <label for="demo-select">Choose an option:</label>
+                <select id="demo-select" name="demo-select">
+                    <option value="first">First option</option>
+                    <option value="second">Second option</option>
+                </select>
+            </section>
+
+            <div hidden>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td id="version-info-table-theme-cell"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button type="button" id="dialog-trigger">Show me the dialog!</button>
+                <dialog id="dialog"></dialog>
+            </div>
+        </main>
+
+        <script src="index.js"></script>
+    </body>
+</html>
